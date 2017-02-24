@@ -1,19 +1,44 @@
-<head>
-<link rel="stylesheet" href="pi.css" type="text/css">
 <script type="text/javascript" src="pi.js"></script>
-<h1>Pi Generator<h1/> <br/>
-<head/>
 
-<body>
-<div class='center'>
+<form name='myForm' method='post'>
+   <input type='text' readonly='readonly' name='result' placeholder='pi' /><br />
+   <input type='number' name='num' placeholder='accuracy' /><br />
+   <input type='button' id='calc-button' name='submit' value='Calculate' />
+   <div id='time'></div>
+</form>
 
- <form name="" id="" method="post" action="" enctype="text/plain" onsubmit="calcPI(this.t1.value);return false;">
-      Number of Digits:<br>
-      <input type="text" name="t1" id="t1" value="100" size="25" maxlength="25">
-      
-      <input type="button" value="Calculate Pi" onclick="calcPI(this.form.t1.value)">
-    </form>
- <div id="d1">0</div>
+<script>
+ $('#calc-button').click(function(e){
+   e.preventDefault();
+   calculate();    
+});
 
-</div>
-<body/>
+function calculate(){
+    var num = document.myForm.num.value;
+    var pi=4,top=4,bot=3,minus = true;
+    next(pi,top,bot,minus,num);
+}
+function next(pi,top,bot,minus,num){
+    var cur_time = Date.now();
+    for(var i=0;i<num;i++){
+        pi += (minus == true)?-(top/bot):(top/bot);
+        minus = !minus;
+        bot+=2;
+    }
+    var end_time = Date.now();
+    var total_time = end_time - cur_time;
+    if(total_time >= 1000){
+        total_time = (total_time/1000)+"seconds";
+    }else{
+        total_time += "ms";
+    }
+    
+    document.myForm.result.value = pi;
+    document.getElementById('time').innerHTML = "Result calculated in: " + total_time + "...";
+}
+ 
+<script/>
+        
+
+
+ 
