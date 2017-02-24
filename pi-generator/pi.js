@@ -1,7 +1,7 @@
 var c=0;
 function Calculate()
 {
-var c = document.getElementById("accuracy");
+var c = document.getElementById("accuracy").value;
 if (c>0)
 {
 var Pi=0;
