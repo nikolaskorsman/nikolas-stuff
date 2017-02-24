@@ -7,14 +7,16 @@
 <body>
 <div class='center'>
 
-<form name='myForm' action='pi.php' method='post'>
-   Accuracy: <br/>
-   <input type='number' name='num'> <br/> <br/>
-   Pi: <br/>
-   <input type='text' readonly='readonly' name='result'>
-   <div id='time'></div> <br/>
-      <input type='button' id='calc-button' name='submit' value='Calculate'> <br/> <br/>
-</form>
+ <form name="" id="" method="post" action="" enctype="text/plain" onsubmit="calcPI(this.t1.value);return false;">
+      Number of Digits:<br>
+      <input type="text" name="t1" id="t1" value="100" size="25" maxlength="25">
+      <br>Add Count:
+      <input type="checkbox" name="cbCount" id="cbCount" value="" checked="checked">
+      <br>Add Spaces:
+      <input type="checkbox" name="cbSpace" id="cbSpace" value="" checked="checked">
+      <br>
+      <input type="button" value="Calculate Pi" onclick="calcPI(this.form.t1.value)">
+    </form>
 
 </div>
 <body/>
