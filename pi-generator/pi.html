@@ -1,13 +1,12 @@
-<link rel="stylesheet" href="pi.css" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="pi.js"></script>
+<link rel='stylesheet' href='pi.css' type='text/css'>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='pi.js'></script>
 
-<div class="center">
+<div class='center'>
 <form name='myForm' method='post'>
-   <input type='text' readonly='readonly' name='result' placeholder='pi' /><br />
-   <input type='number' name='num' placeholder='accuracy' /><br />
-   <input type='button' id='calc-button' name='submit' value='Calculate' />
-   <div id='time'></div>
+   <input type='text' readonly='readonly' id='result' placeholder='pi' /><br />
+   <input type='number' placeholder='accuracy' id='accuracy' /><br />
+   <input type='button' onclick='Calculate()' value='Calculate' />
 </form>
  <div/>
 
