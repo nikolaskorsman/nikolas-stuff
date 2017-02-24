@@ -11,7 +11,7 @@ for (i=0;i<=c;i++)
 Pi=Pi+(4/n)-(4/(n+2))
 n=n+4
 }
-document.getElementById("result").innerHTML = Pi;
+document.getElementById("result").value = Pi;
 }
 else
 {
