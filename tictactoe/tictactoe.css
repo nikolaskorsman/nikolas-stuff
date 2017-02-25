@@ -1,0 +1,129 @@
+html {
+  box-sizing: border-box;
+}
+html * {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.name {
+  text-align: center;
+  padding-top: 11px;
+}
+
+.top {
+  background: #2196F3;
+  padding: 20px;
+  color: #ffffff;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+}
+
+#game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  height: 200px;
+  width: 200px;
+  margin: 50px auto;
+}
+#game .tile {
+  border: 1px solid black;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 30%;
+          flex: 1 30%;
+  -webkit-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
+}
+#game .tile:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#game .tile.x, #game .tile.o {
+  cursor: default;
+}
+#game .tile.x:after, #game .tile.o:after {
+  font-size: 50px;
+  line-height: 0;
+  margin: auto;
+}
+#game .tile.x:hover, #game .tile.o:hover {
+  background-color: #FFF;
+}
+#game .tile.x:after {
+  content: 'x';
+}
+#game .tile.o:after {
+  content: 'o';
+}
+
+input {
+  color: #999999;
+}
+
+button {
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 1px;
+  background-color: #2196F3;
+  border: none;
+  box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.1);
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+button:hover {
+  background-color: #0d8aee;
+  box-shadow: 0px 5px 3px 0px rgba(50, 50, 50, 0.3);
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+button.blue {
+  background-color: #ffffff;
+  color: #2196F3;
+}
+button.blue:active, button.blue:focus {
+  background-color: #f2f2f2;
+}
+button.blue:hover {
+  background-color: #f2f2f2;
+}
+
+#restart {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.hide {
+  display: none !important;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
