@@ -27,9 +27,7 @@ Cipher.toQWERTY = function(text, decode) {
             return tmp;
         })();
     }
-
-    return text.split('').filter(function(v) {
-        // Filter out characters that are not in our list
+ {
         return map.hasOwnProperty(v.toLowerCase());
     }).map(function(v) {
         // Replace old character by new one
