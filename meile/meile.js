@@ -1,17 +1,16 @@
 Cipher.toQWERTY = function(text, decode) {
     // ABCDEF to QWERTY map
     var map = {
-        a: 'q', b: 'w', c: 'e',
-        d: 'r', e: 't', f: 'y',
-        g: 'u', h: 'i', i: 'o',
-        j: 'p', k: 'a', l: 's',
-        m: 'd', n: 'f', o: 'g',
-        p: 'h', q: 'j', r: 'k',
-        s: 'l', t: 'z', u: 'x',
-        v: 'c', w: 'v', x: 'b',
-        y: 'n', z: 'm'
+        a: 'u', b: 'z', c: 'v',
+        d: 't', e: 'i', f: 's',
+        g: 'r', h: 'p', i: 'e',
+        j: 'n', k: 'm', l: 'l',
+        m: 't', n: 'j', o: 'o',
+        p: 'h', q: 'q', r: 'g',
+        s: 'f', t: 'd', u: 'a',
+        v: 'c', w: 'w', x: 'x',
+        y: 'ö', z: 'b', ä: 'ä', ö: 'y'
     };
-
     // Flip the map
     if(decode) {
         map = (function() {
